@@ -1,0 +1,18 @@
+{% block subject 'Добро пожаловать на Scrubbly' %} 
+
+{% block body_html %} 
+	{% set title = block('subject') %}
+	{% include 'common/header.html' %} 
+
+	<b>Привет, {{first_name}}!</b>
+	<br>
+	<br>
+	Это ваш первый день на Scrubbly! Желаем удачи!
+	<br>
+	<br>
+
+	{% include 'common/footer.html' %}
+{% endblock %} 
+
+{% block body_text %}
+{% endblock %}

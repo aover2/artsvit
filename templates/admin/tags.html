@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <form  action="search">
+                <input type="text" name="q" >
+                <input type="hidden" name="type" value='store'>
+  </form>
+<ul>
+        <form class="page-bar">
+            <ul>   
+                <li><span  style="width:30px; !important;">id</span></li> 
+            	<li><span>value</span></li> 
+            	<li><span>url</span></li> 
+            
+            </ul>
+        </form>
+</ul>
+
+	<ul>
+    	{% for tag in tags %}
+        <form class="page-bar" action="save">
+            <ul>   
+                <li><span  style="width:30px; !important;">{{ tag['id'] }}</span></li> 
+                <li><input type="hidden" name="id" value="{{tag['id']}}"></li> 
+                <li><input type="hidden" name="type" value='tag'></li> 
+                <li><input type="text" name="value" value="{{tag['value']}}"></li> 
+                <li><input type="text" name="url"value="{{tag['url']}}"></li>
+                <li><input type="submit" value="save"></li>
+            </ul>
+        </form>
+    	{% endfor %}
+	</ul>
+{% endblock %}

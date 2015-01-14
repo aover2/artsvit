@@ -1,0 +1,30 @@
+
+<div class="item item-store" data-id="{{ store['id'] }}">
+    
+    <div class="info">
+    <a href="/store/{{store['domain']}}" class="name">{{store['name']}}</a>
+    <a href="/store/{{store['domain']}}/followers" class="username">Подписчики: {{ store['followers_count'] }}</a>
+    </div>
+
+    <div class="products">
+
+    {% for product in store['title_products']['products'] %}
+        <a class='image' href="/p/{{ product['id'] }}/{{ product['name_url'] }}" >
+            {% if product != null %}
+            <img src="/u/thumbs/{{store['id']}}/min/{{product['hash']}}.jpg" alt="{{product['name']}}" title="{{product['name']}}"  />
+            {% endif %}
+        </a>  
+    {% endfor %}
+    </div>
+
+    <button data-id="{{ store['id'] }}" data-type="store" data-follow-status="{{ store['follow_status'] }}" 
+                            class="btn btn-follow btn-follow-store-{{ store['id'] }}  {% if store['follow_status'] == 1 %}btn-follow-follow{% endif %}">
+                                {% if store['follow_status'] == 1 %}
+                                    В обновлениях
+                                {% else %}
+                                    Подписаться
+                                {% endif %}
+                                
+                            </button>
+     
+</div>

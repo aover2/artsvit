@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artsvit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/bjqs.css">
+<link rel="shortcut icon" href="css/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/liMarquee.css">
+<link rel="stylesheet"  href="css/jquery.mCustomScrollbar.css" >
+
+<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="js/bjqs-1.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(48.4609885, 35.047008);
+  var mapOptions = {
+    zoom: 18,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+
+</head>
+<body id="home">
+	<div id="wrap">
+	{% block header %}
+	{% include 'common/header.html' %}
+	{% endblock %}
+		<div id="content">
+			<div class="container">
+				<div class="left-col">
+					<div id="banner-fade">
+				        <ul class="bjqs">
+				          <li>
+				          		<div class="slider-container">
+					          		<img class="image" src="css/img/slider-example.png">
+					          		<div class="date">23 сент - 30 окт 2014</div>
+					          		<div class="title">
+						          		HАЗВАHИЕ
+						          		<br>
+						          		•
+						          		<br>
+						          		ЕВГЕHИЙ
+						          		<br>
+						          		ПЕТРОВ
+						          		<br>
+					          		</div>
+					          		<div class="meta">
+					          			живопись
+					          			<br>
+					          			скульптура
+					          		</div>
+				          		</div>
+				          	</li>
+				          	 <li>
+				          		<div class="slider-container">
+					          		<img class="image" src="css/img/slider-example.png">
+					          		<div class="date">23 сент - 30 окт 2014</div>
+					          		<div class="title">
+						          		HАЗВАHИЕ
+						          		<br>
+						          		•
+						          		<br>
+						          		Test
+						          		<br>
+						          		Test
+						          		<br>
+					          		</div>
+					          		<div class="meta">
+					          			живопись
+					          			<br>
+					          			скульптура
+					          		</div>
+				          		</div>
+				          	</li>
+				          
+				        </ul>
+				    </div>
+				    <script class="secret-source">
+				        jQuery(document).ready(function($) {
+
+				          $('#banner-fade').bjqs({
+				            height      : 320,
+				            width       : 738,
+				            animtype : 'fade',
+				            animduration : 1000,
+				            animspeed : 5000,
+				            automatic : true,
+				            showcontrols : false,
+				            showmarkers : false
+				          });
+
+				        });
+				    </script>
+				    
+					<div class="previews-wrapper">
+						<div class="preview-box">
+							<div class="title">
+								ВЫСТАВКИ
+							</div>
+							<img class="image" src="css/img/preview1.png">
+							
+							<div class="subtitle">23 сент - 30 окт 2014</div>
+							<div class="meta">
+							МАСТЕРА СОВЕТСКОЙ <br>
+							ГРАФИКИ 50-70-Х ГГ.
+							</div>
+							<a class="top-side-link" href="#">все</a>
+						</div>
+						<div class="preview-box">
+							<div class="title">
+								ПРОЕКТЫ
+							</div>
+							<img class="image" src="css/img/preview2.png">
+							
+							<div class="subtitle">C января 2015</div>
+							<div class="meta">
+							ШКОЛА ЖИВОПИСИ<br>
+							ДЛЯ ВЗРОСЛЫХ
+							</div>
+							<a class="top-side-link" href="#">все</a>
+						</div>
+						<div class="preview-box">
+							<div class="title">
+								КОЛЛЕКЦИЯ
+							</div>
+							<img class="image" src="css/img/preview3.png">
+							
+							<div class="subtitle">Живопись</div>
+							<div class="meta">
+							ПЕТР СУПОНИН<br>
+							Девочка в колосьях, 1956
+							</div>
+							<a class="top-side-link" href="#">все</a>
+						</div>
+					</div>
+					<div id="news" >
+						<div class="title">HОВОСТИ</div>
+						<div class="news-item">
+							<img class="image" src="css/img/news.png">
+							<div class="meta">
+								<div class="date">Oct 01, 2014</div>
+								<div class="title">Holiday of Pace Beijing and Pace Hong Kong</div>
+								<div class="subtitle">Pace Beijing will be closed for National Day holidays on 28 - 29 September, 1 - 3 October, 5...</div>
+							</div>
+						</div>
+						<div class="news-item">
+							<img class="image" src="css/img/news.png">
+							<div class="meta">
+								<div class="date">Oct 01, 2014</div>
+								<div class="title">Holiday of Pace Beijing and Pace Hong Kong</div>
+								<div class="subtitle">Pace Beijing will be closed for National Day holidays on 28 - 29 September, 1 - 3 October, 5...</div>
+							</div>
+						</div>
+						<div class="news-item">
+							<img class="image" src="css/img/news.png">
+							<div class="meta">
+								<div class="date">Oct 01, 2014</div>
+								<div class="title">Holiday of Pace Beijing and Pace Hong Kong</div>
+								<div class="subtitle">Pace Beijing will be closed for National Day holidays on 28 - 29 September, 1 - 3 October, 5...</div>
+							</div>
+						</div>
+						<div class="news-item">
+							<img class="image" src="css/img/news.png">
+							<div class="meta">
+								<div class="date">Oct 01, 2014</div>
+								<div class="title">Holiday of Pace Beijing and Pace Hong Kong</div>
+								<div class="subtitle">Pace Beijing will be closed for National Day holidays on 28 - 29 September, 1 - 3 October, 5...</div>
+							</div>
+						</div>
+						<div class="news-item">
+							<img class="image" src="css/img/news.png">
+							<div class="meta">
+								<div class="date">Oct 01, 2014</div>
+								<div class="title">Holiday of Pace Beijing and Pace Hong Kong</div>
+								<div class="subtitle">Pace Beijing will be closed for National Day holidays on 28 - 29 September, 1 - 3 October, 5...</div>
+							</div>
+						</div>
+						<div class="news-item">
+							<img class="image" src="css/img/news.png">
+							<div class="meta">
+								<div class="date">Oct 01, 2014</div>
+								<div class="title">Holiday of Pace Beijing and Pace Hong Kong</div>
+								<div class="subtitle">Pace Beijing will be closed for National Day holidays on 28 - 29 September, 1 - 3 October, 5...</div>
+							</div>
+						</div>
+						<div class="news-item">
+							<img class="image" src="css/img/news.png">
+							<div class="meta">
+								<div class="date">Oct 01, 2014</div>
+								<div class="title">Holiday of Pace Beijing and Pace Hong Kong</div>
+								<div class="subtitle">Pace Beijing will be closed for National Day holidays on 28 - 29 September, 1 - 3 October, 5...</div>
+							</div>
+						</div>
+
+					</div>
+			 		
+			      	<div class="editions-wrap">
+			      		<div class="editions">
+				      		<div class="title">ИЗДАHИЯ</div>
+				      		<div class="edition">
+				      			<img class="image" src="css/img/editions.png">
+					      		<div class="handler">
+					      			Баранько Александр
+					      		</div>
+					      		<div class="description">
+					      			test test
+					      		</div>
+					      	</div>
+					      	<div class="edition">
+				      			<img class="image" src="css/img/editions.png">
+					      		<div class="handler">
+					      			Баранько Александр
+					      		</div>
+					      		<div class="description">
+					      			test test
+					      		</div>
+					      	</div>
+					      	<div class="edition">
+				      			<img class="image" src="css/img/editions.png">
+					      		<div class="handler">
+					      			Баранько Александр
+					      		</div>
+					      		<div class="description">
+					      			test test
+					      		</div>
+					      	</div>
+				      		<a class="top-side-link" href="#">все</a>
+			      		</div>
+			      		<div class="artists">
+				      		<div class="title">ХУДОЖHИКИ</div>
+				      		<div class="edition">
+				      			<img class="image" src="css/img/editions.png">
+					      		<div class="handler">
+					      			Баранько Александр
+					      		</div>
+					      		<div class="description">
+					      			test test
+					      		</div>
+					      	</div>
+					      	<div class="edition">
+				      			<img class="image" src="css/img/editions.png">
+					      		<div class="handler">
+					      			Баранько Александр
+					      		</div>
+					      		<div class="description">
+					      			test test
+					      		</div>
+					      	</div>
+					      	<div class="edition">
+				      			<img class="image" src="css/img/editions.png">
+					      		<div class="handler">
+					      			Баранько Александр
+					      		</div>
+					      		<div class="description">
+					      			test test
+					      		</div>
+					      	</div>
+				      		<a class="top-side-link" href="#">все</a>
+			      		</div>
+			      	</div>
+			      	<div class="meta-descr">
+			      		Галерея АРТСВІТ презентує новий напрямок своіяльност – серію видань »Художня географія», що має метою популяризацію українського мистецтва. Назву проекту ми обрали не випадково. Адже саме географію часто називають романтичною наукою і тлумачать не лише як «землеопис» чи «нотатки про Землю». Завдяки їй кожен з нас має можливість здійснювати уявні подорожі різними куточками планети. Тому «Художня географія» – це мандрівка мистецьким світом. Команда АРТСВІТ має на меті створити серію видань, що будуть представлені загалу у вигляді книг, присвячених як мистецьким жанрам напрямкам, так і окремим персоналіям. Перш за все, ми ґрунтуємось на численній колекції творів нашої галере, завдяки публікаціям, прагнемо зробити...
+			      	</div>
+			      	<div class="panorama">
+			      		<div class="title">360&deg  ПАHОРАМА</div>
+			      	</div>
+			      	<object width="740" height="300" data="css/img/DSC_9259.swf" type="application/x-shockwave-flash"><param name="src" value="css/img/DSC_9259.swf"></object>
+		    	</div>
+		    	<aside class="home-aside">
+		      		<div class="facebook-social">
+		      			<div class="fb-like-box fb_iframe_widget" s data-href="https://www.facebook.com/pages/Artsvit-Gallery/500220810051011" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" data-width="172" data-height="290" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;header=false&amp;height=290&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FArtsvit-Gallery%2F500220810051011&amp;locale=en_US&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=100"><span style="vertical-align: bottom; width: 172px; height: 290px;"><iframe name="f340d5863" width="212px" height="290px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Dfe4776034%26domain%3Dartsvit.dp.ua%26origin%3Dhttp%253A%252F%252Fartsvit.dp.ua%252Ff2045815f4%26relation%3Dparent.parent&amp;color_scheme=light&amp;header=false&amp;height=290&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FArtsvit-Gallery%2F500220810051011&amp;locale=en_US&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=182px" style="border: none; visibility: visible; width: 182px; height: 290px;" class=""></iframe></span></div>
+		      		</div>
+		      		<div class="meta-box">
+			      		
+			      		галерея работает
+			      		<div class="important">
+
+			      			<span>11.00-19.00</span>    выходной: <span>вс,пн</span>
+			      		</div>
+			      		
+			      		как найти
+			      		
+			      		<div id="map-canvas"></div>
+			      		<div class="adress">
+				      		Адрес галереи:<br>
+							Днепропетровск, <br>
+							улица Артема, 4-А<br>
+							<br>
+							тел.	 <span>+38095 799 35 35 </span><br>
+			                <span>+38056 372 54 23</span>
+		            	</div>
+	            	</div>
+	            	<div class="partners-box">
+
+	            	</div>
+	            	<div class="copyright-box">
+	            		© Арсвит галерея
+	            	</div>
+	            </aside>
+		    
+		      	
+			</div>
+		</div>
+		<script>
+			(function($){
+				$(window).load(function(){
+					$("#wrap,#news").mCustomScrollbar({
+						theme:"dark"
+					});
+					
+				});
+			})(jQuery);
+		</script>
+		<div id="footer"></div>
+		</div>
+		
+
+	</div>
+	<div id="preloader" class="preloader"></div>
+	
+
+	
+</body>
+</html>

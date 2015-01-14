@@ -1,0 +1,14 @@
+{% verbatim %}
+
+<script id="comment_item_tpl" type="text/x-jquery-tmpl">
+
+    <div class="item-comment" >
+        <a class="photo" href="/${user['username']}"><img src="${user['photo']}"></a>
+        <div class="info">
+            <a class="name" href="/${user['username']}" >${user['first_name']} ${user['last_name']}</a> • <time class="timeago time" datetime="${add_time_iso}"></time>
+            <div class="comment">${value}</div>
+        </div>
+    </div>
+    
+</script>
+{% endverbatim %}

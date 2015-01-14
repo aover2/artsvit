@@ -1,0 +1,41 @@
+<div class="page-bar">
+     <div class="container">
+        <h1>найти друзей</h1>
+
+       <ul class="nav nav-simple nav-r nav-links">
+            <li><a href="/trendsetters">На кого подписаться</a></li>
+        </ul>
+      </div>  
+  </div> 
+
+<div class="container">
+{#
+  <div class="share-bar">
+    <button class="btn" data-type="vk"><i class="ico ico-social ico-social-vk"></i>Вконтакте</button>
+    <button class="btn" data-type="tw"><i class="ico ico-social ico-social-tw"></i>Twitter</button>
+    <button class="btn" data-type="fb"><i class="ico ico-social ico-social-fb"></i>Facebook</button>
+    <button class="btn" data-type="gp"><i class="ico ico-social ico-social-gp"></i>Google+</button>
+    <button class="btn" data-type="link"><i class="ico ico-social ico-social-link"></i>Ссылка</button>
+</div>
+ #}   
+
+
+   {% if referrers['users'] %}
+ 	 <div id="users" class="items-container">
+     {% for user in referrers['users'] %}
+            {% include 'tmpl/user.html' %}
+        {% endfor %}
+   </div>
+   {% else %}
+  
+
+    <div class="empty-page"  > 
+            <h2>Никто из ваших друзей пока не зарегистрирован на Scrubbly. Хотите узнать какие вещи им нравятся?</h2>
+             <br><a class="btn" href="/invite">Пригласите ваших друзей</a>
+    </div> 
+
+    {% endif %}
+</div>    
+
+
+

@@ -1,0 +1,284 @@
+ {% verbatim %}  
+
+<script id="product_preview_tpl" type="text/x-jquery-tmpl">
+    <div class='product-topic'>
+        <p>${name}</p>
+        <button class="btn btn-close">
+            <img src="/static/site/i/btn-preview-close.png">
+        </button>
+    </div>
+    
+    <div class="product-preview-main-block">
+    <div class="container mobile-product-container max4col ">  
+    <div class="product-main">  
+    <div class="product-info">
+        <div class="product-image">  
+            <a  href="/purchase/${id}" rel="nofollow" target="_blank" class="purchase-link" data-id="${id}" data-store="${store['domain']}" data-name="${name}" data-source="Product Preview Image">  
+                <img  src="/u/thumbs/${store_id}/max/${hash}.jpg" alt="${name}" title="${name}" >
+            </a>
+        </div> 
+
+        <div class="title">
+            <ul class="breadcrumbs">
+                {{if structure['section'] }}
+                <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="/${structure['section']['url']}" itemprop="url">
+                        <span itemprop="title">${structure['section']['name']}</span>
+                    </a>
+                </li>
+                {{/if}}
+
+
+                {{if structure['category'] }}
+                <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="/${structure['category']['url']}" itemprop="url">
+                        <span itemprop="title">${structure['category']['name']}</span>
+                    </a>
+                </li>
+                {{/if}}
+
+                {{if structure['type'] }}
+                <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="/${structure['type']['url']}" itemprop="url">
+                        <span itemprop="title">${structure['type']['name']}</span>
+                    </a>
+                </li>
+                {{/if}}
+            </ul>
+                 <h1 class="name">${name}</h1>
+        </div>
+
+        <div class="product-publisher">
+
+        {{if publisher == 'user' }}
+            <a href="/${user['username']}" class="photo"><img src="${user['photo']}"></a>
+
+             <div class="publishers">
+            <a href="/${user['username']}" class="name">${user['username']}</a>
+            с <a href="/store/${product_store['domain']}" class="name">${product_store['name']}</a>
+            </div>
+        {{else}}
+            <a href="/store/${product_store['domain']}" class="photo">
+            {{if product_store['logo'] }}
+                <img title="${product_store['name']}" alt="${product_store['name']}" src="/u/logotypes/stores/${product_store['id']}.png">
+            {{else}}
+                <img src="/static/site/i/store-nologo-big.png">
+            {{/if}}
+            </a>
+             <div class="publishers">
+            <a href="/store/${product_store['domain']}" class="name">${product_store['name']}</a>
+            </div>
+        {{/if}}
+        <br>
+        <time class="time timeago" datetime="${add_time_iso}"></time>
+    </div>
+    </div>
+        <div class="product-comments product-comments-${id}">
+       
+            <form>
+                <input type="hidden" name="product_id" value="${id}">
+                <input type="text" class="comment-input" name="value" placeholder="Введите свой комментарий">
+                <input type="submit" value="Добавить" class="btn">
+            </form>
+          
+
+            <div class="comments">
+                {{tmpl($item.data.comments['comments']) "#comment_item_tpl"}}
+            </div>
+        </div>
+
+        {{if store['info'] }}
+            <div class="product-store-info">
+           
+                <div class="psib" id="product-preview-store-info-delivery">
+                    <h3>Доставка</h3>
+                    <p>
+                        ${store['info']['delivery_info']}
+                        <br>
+                        {{if store['info']['free_delivery'] }}
+                         Есть бесплатная доставка
+                         {{/if}}  
+                    </p>
+                </div>
+                <div class="psib" id="product-preview-store-info-payment">
+                    <h3>Оплата</h3>
+                    <p>${store['info']['payment_info']}</p>
+                </div>
+                <div class="psib" id="product-preview-store-info-return">
+                    <h3>Возврат</h3>
+                    <p>
+                        ${store['info']['return_info']}
+                        <br>
+                        {{if store['info']['fitting'] }}
+                         Примерка перед покупкой
+                         {{/if}} 
+                    </p>
+                </div>
+                 
+            </div> 
+            {{/if}} 
+    </div>
+
+    <div class="product-sidebar">
+        
+        <div class="product-sidebar-block">
+
+            <div class="price">${price} ${product_currency}
+            {{if available == 1 }}
+             <i class="flaticon-check33"></i>
+             {{/if}}  
+             </div>
+
+            <div class="product-controls"> 
+                
+
+                <a href="/purchase/${id}" rel="nofollow" target="_blank"  class="btn btn-buy" data-id="${id}" data-store="${store['domain']}" data-name="${name}" data-source="Product Preview Btn Purchase">
+                    <div class='product-buy-btn'>Купить в ${store['name']}</div>  
+                    
+                </a>
+               
+                
+                 <button data-id="${id}" data-save-status="${save_status}" class="btn btn-save btnsave_${id} {{if save_status == 1 }}btn-save-save{{/if}} ">
+                    {{if save_status == 1 }}
+                        <div>Сохранено</div>
+                    {{else}}
+                        <div>Сохранить</div>
+                    {{/if}}  
+                    <span>${saves_count}</span> 
+                </button>
+
+                {{if savers['users'] }}
+                    <div  class="product-savers-thumbs" >
+                  
+                        {{each savers['users'] }}
+                           
+                            <a href="/${username}" class="photo"><img src="${photo}" ></a> 
+                         
+                        {{/each}}  
+                    </div>
+                {{/if}} 
+            </div>
+            
+            {{if tags['tags'] }}
+            <div class="product-tags tags">
+                
+                  {{each tags['tags'] }}
+                    {{if structure['type'] }}
+                    <a href="/${structure['type']['url']}/${url}" class="tag">#${structure['type']['name']} ${value}</a>
+                    {{/if}}
+                    <a href="/${url}" class="tag">#${value}</a>
+                  {{/each}}  
+            </div>
+            {{/if}} 
+            
+        </div>
+
+
+        <div class="product-comments mobile-comments product-comments-${id}">
+           
+                <form>
+                    <input type="hidden" name="product_id" value="${id}">
+                    <input type="text" class="comment-input" name="value" placeholder="Введите свой комментарий">
+                    <input type="submit" value="Добавить" class="btn">
+                    <i class='flaticon-speech18'></i>
+                </form>
+              
+
+                <div class="comments">
+                    {{tmpl($item.data.comments['comments']) "#comment_item_tpl"}}
+                </div>
+           
+        </div>
+
+
+
+
+
+        <div class="product-sidebar-block info-block">
+            <ul>
+                <li><a class="purchase-link" href="/purchase/${id}" rel="nofollow" target="_blank" data-source="Product Preview Btn Description" data-id="${id}" data-store="${store['domain']}" data-name="${name}" ><i class="flaticon-barcode10"></i> Описание</a></li>
+
+                {{if store['info'] }}
+                    <li><a href="#product-preview-store-info-delivery"><i class="flaticon-delivery23"></i>Доставка</a></li>
+                {{else}}
+                    <li><a class="purchase-link" href="/purchase/${id}" rel="nofollow" target="_blank" data-source="Product Preview Btn Delivery" data-id="${id}" data-store="${store['domain']}" data-name="${name}"><i class="flaticon-delivery23"></i>Доставка</a></li>
+                {{/if}}
+
+                <li><a class="purchase-link" href="/purchase/${id}" rel="nofollow" target="_blank" data-source="Product Preview Btn Colors" data-id="${id}" data-store="${store['domain']}" data-name="${name}"><i class="flaticon-painter14"></i> Цвета</a></li>
+
+                {{if store['info'] }}
+                    <li><a href="#product-preview-store-info-payment" ><i class="flaticon-creditcard3"></i> Оплата</a></li>
+                {{else}}
+                    <li><a class="purchase-link" href="/purchase/${id}" rel="nofollow" target="_blank" data-source="Product Preview Btn Payment" data-id="${id}" data-store="${store['domain']}" data-name="${name}"><i class="flaticon-creditcard3"></i> Оплата</a></li>
+                {{/if}}
+
+                <li><a class="purchase-link" href="/purchase/${id}" rel="nofollow" target="_blank" data-source="Product Preview Btn Sizes" data-id="${id}" data-store="${store['domain']}" data-name="${name}"><i class="flaticon-ruler17"></i> Размеры</a></li>
+
+                {{if store['info'] }}
+                    <li><a href="#product-preview-store-info-return" ><i class="flaticon-backspace1"></i> Возврат</a></li>
+                {{else}}
+                    <li><a class="purchase-link" href="/purchase/${id}" rel="nofollow" target="_blank" data-source="Product Preview Btn Return" data-id="${id}" data-store="${store['domain']}" data-name="${name}"><i class="flaticon-backspace1"></i> Возврат</a></li>
+                {{/if}}
+
+            </ul>
+        </div>
+
+        
+        <div class="product-sidebar-block store-block">
+                <div>
+                    <div class="header">
+                        <div class="title">
+                            <a href="/store/${store['domain']}" class="name">${store['name']}</a>
+                            <a href="/store/${store['domain']}/followers" class="domain">Подписчики: ${store['followers_count']}</a>
+                        </div>
+
+                        <button data-id="${store['id']}" data-type="store" data-follow-status="${store['follow_status']}" 
+                            class="btn btn-follow btn-follow-store-${store['id']}  
+                            {{if store['follow_status'] == 1 }}btn-follow-follow{{/if}}">
+                                {{if store['follow_status'] == 1 }}
+                                    В обновлениях
+                                {{else}}
+                                    Подписаться
+                                {{/if}}
+                                
+                            </button>
+                    </div>
+
+                    <div  class="title-products">
+                        {{each store['title_products']['products'] }}
+                            <a href="/p/${id}/${name_url}">
+                            {{if hash }}
+                            <img src="/u/thumbs/${store_id}/min/${hash}.jpg" />
+                            {{/if}}
+                            </a>
+                        {{/each}}    
+                    </div>
+                </div>
+            </div>  
+        
+
+        
+    </div>    
+    </div>
+    </div>
+
+    {{if savers }}
+    <div class="container  mobile-product-container max4col">
+        <div class="product-block-title">Сохранили</div>
+        <div  class="items-container product-savers">
+            {{tmpl($item.data.savers['users']) "#user_item_tpl"}}
+        </div>
+    </div>
+    {{/if}} 
+
+    {{if similar }}
+    <div class="container  mobile-product-container max4col">
+        <div class="product-block-title">Похожие товары</div>
+        <div  class="items-container product-similar-products">
+            {{tmpl($item.data.similar['products']) "#product_item_tpl"}}
+        </div>
+    </div>
+    {{/if}} 
+</script>  
+
+{% endverbatim %} 

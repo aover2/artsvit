@@ -1,0 +1,38 @@
+{% verbatim %}
+
+<script id="user_item_tpl" type="text/x-jquery-tmpl">
+<div class="item item-user item-store ">
+    <a {{if wizard }}{{else}}href="/${username}"{{/if}} class="photo"><img src="${photo}" ></a> 
+    <div class="info">
+    <a {{if wizard }}{{else}}href="/${username}"{{/if}} class="name">${username}</a>
+    <a {{if wizard }}{{else}}href="/${username}/followers"{{/if}} class="username">Подписчики: ${followers_count}</a>
+    </div>
+
+    <div  class="products">
+    {{each title_products['products'] }}
+        <a class ='image' {{if wizard }}{{else}}href="/p/${id}/${name_url}"{{/if}}>
+        {{if hash }}
+        <img src="/u/thumbs/${store_id}/min/${hash}.jpg" alt="${name}" title="${name}" />
+        {{/if}}
+        </a>
+    {{/each}}
+    </div>
+
+    {{if API.current_user_id != id }}
+    <button data-id="${id}" data-type="user" data-follow-status="${follow_status}" 
+    class="btn btn-follow btn-follow-user-${id}  
+    {{if follow_status == 1 }}btn-follow-follow{{/if}}">
+        {{if follow_status == 1 }}
+            В обновлениях
+        {{else}}
+            Подписаться
+        {{/if}}
+        
+    </button>
+    {{/if}}
+
+</div>
+</script> 
+
+
+{% endverbatim %}

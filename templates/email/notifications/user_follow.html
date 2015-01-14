@@ -1,0 +1,18 @@
+{% block subject %}{{ follower_name }} {{ follower_lastname }} подписался на ваши обновления{% endblock %}
+
+{% block body_html %} 
+	{% set title = block('subject') %}
+	{% include 'common/header.html' %} 
+
+	<b>Привет, {{first_name}}!</b>
+	<br>
+	<br>
+		<a href="{{ site_root }}/{{ follower_username }}">{{ follower_name }} {{ follower_lastname }}</a> подписался на ваши обновления.
+	<br>
+	<br>
+	
+	{% include 'common/footer.html' %}
+{% endblock %} 
+
+{% block body_text %}
+{% endblock %}

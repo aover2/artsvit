@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="wrapper">
+		<img class="header-logo" src="css/img/logo.png">
+		<ul class="header-nav">
+			<li><a href="#">ВЫСТАВКИ</a></li>
+			<li><a href="#">ПРОЕКТЫ</a></li>
+			<li><a href="collection.html" id="collection-nav">КОЛЛЕКЦИЯ</a></li>
+			<li><a href="news.html">HОВОСТИ</a></li>
+			<li><a href="#">ART-SHOP</a></li>
+			<li><a href="#">ИHФО</a></li>
+		</ul>
+	</div>
+	<div class="header-aside">
+		<!-- сделать меньше -->
+		<div class="language">
+			<a href="#" class="active">РУС</a>|<a href="#">ENG</a>|<a href="#">УКР</a>
+		</div>
+		<div class="search">
+			<span class="ico ico-search"></span><input placeholder=""  type="text" class="search-input">
+		</div>
+	</div>
+</div>
+<script>
+ if ($('body').is('#collection')){
+      $('#collection-nav').toggleClass('active');
+    };
+</script>

@@ -1,0 +1,17 @@
+User-agent: *
+
+Disallow: /*_openstat
+Disallow: /*from=adwords
+Disallow: /*utm_source*
+Disallow: /*gclid=
+Disallow: /purchase
+Disallow: /api/*
+Disallow: /login
+Disallow: /logout
+Disallow: /cron
+Disallow: /admin
+Disallow: /search
+Disallow: /signup
+Disallow: /signin
+Disallow: /setup
+Disallow: /wizard

@@ -1,0 +1,54 @@
+{% verbatim %}  
+
+
+<script id="product_item_tpl" type="text/x-jquery-tmpl">
+<div class="item item-product" data-id="${id}">
+
+    <a class="image" href="/p/${id}/${name_url}" data-id="${id}" data-store="${product_store['domain']}" data-name="${name}" data-source="List item image" >
+        <img src="/u/thumbs/${store_id}/med/${hash}.jpg" />
+    </a>
+
+    <div class="item-product-info">
+        <a href="/p/${id}/${name_url}" class="name">${name}</a>
+
+            <div class="second-line">
+            {{if discount > 0}}
+                <span class="price newprice">${price} ${product_currency}</span>
+            {{else}}
+                <span class="price">${price} ${product_currency}</span>
+            {{/if}}
+            ·
+            {{if publisher == 'user' }}
+                <a href="/${user['username']}" class="publisher">${user['username']}</a>
+            {{else publisher == 'tag' }}
+                <a href="/${tag['url']}" class="publisher">${tag['value']}</a>
+            {{else}}
+                <a href="/store/${product_store['domain']}" class="publisher">${product_store['name']}</a>
+            {{/if}}
+
+            <span class="saves-count">+ ${saves_count}</span>
+               
+            </div>
+
+    </div>
+
+
+    <div class="controls">
+
+        <button data-save-status="${save_status}"  class="btn btn-save btnsave_${id} {{if save_status == 1}}btn-save-save{{/if}}">
+            {{if save_status == 1}}
+                <div>Сохранено</div>
+            {{else}}
+                <div>Сохранить</div>
+            {{/if}}
+        </button>
+
+        <button class="btn btn-send"></button>
+
+        
+    </div>
+       
+</div>
+</script>  
+
+{% endverbatim %}  

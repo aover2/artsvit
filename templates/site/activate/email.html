@@ -1,0 +1,32 @@
+{% extends "common/base.html" %}
+
+{% block head %}
+<title>Scrubbly</title>
+<meta name="robots" content="noindex, follow" />
+{% endblock %}
+
+{% block header %}
+{% include 'common/header.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div id="content">
+    <div class="container">
+        <div class="empty-page">
+            {% if activation == 1 %}
+                <h2>Ваша электронная почта подтверждена</h2>
+            {% else%}
+                <h2>Ошибка активации</h2>
+            {% endif %}
+        </div>
+        
+	</div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'common/footer.html' %}
+{% endblock %}

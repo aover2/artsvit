@@ -1,0 +1,23 @@
+{% verbatim %}
+
+<script id="set_item_tpl" type="text/x-jquery-tmpl">
+
+${( $data.set_url = url ),''}
+
+<div class="item  item-set">
+	
+    <a href="/set/${url}" class="img"><img src="/u/sets/${id}_min.jpg" ></a>
+    <a href="/set/${url}" class="name">${name}</a>
+     <div  class="products">
+  	{{each products.slice(0, 4) }}
+        <a {{if wizard }}{{else}}href="/p/${id}/${name_url}"{{/if}}>
+        <img src="/u/thumbs/${store_id}/min/${hash}.jpg" alt="${name}" title="${name}" />
+        </a>
+        
+    {{/each}}  
+    </div>
+
+</div>
+</script> 
+
+{% endverbatim %}

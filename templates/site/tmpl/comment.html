@@ -1,0 +1,9 @@
+
+    <div class="item-comment" >
+        <a class="photo" href="/{{ comment['user']['username'] }}"><img src="{{ comment['user']['photo'] }}"></a>
+        <div class="info">
+            <a class="name" href="/{{ comment['user']['username'] }}" >{{ comment['user']['first_name'] }} {{ comment['user']['last_name'] }}</a> • <time class="timeago time" datetime="{{ comment['add_time_iso'] }}"></time>
+            <div class="comment">{{ comment['value'] }}</div>
+        </div>
+    </div>
+

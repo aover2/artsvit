@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+	
+
+{% block content %}
+
+            <form  action="search">
+                <input class="search-bar" type="text" name="q" placeholder="Поиск" >
+                <input type="hidden" name="type" value='store'>
+            </form>
+<ul>
+     
+</ul>
+
+	<ul class="list">
+         <form class="title-bar">
+            <ul>   
+                <li><span style="width:30px; !important;">id</span></li> 
+                <li><span>name</span></li> 
+                <li><span>domain</span></li> 
+                <li><span style="width:300px; !important;">deeplink</span></li> 
+            </ul>
+        </form>
+    	{% for store in stores %}
+        <div class="bar">
+            <a href="/admin/store/{{ store[0].id }}">
+                <ul>   
+                    <li><span style="width:30px; !important;">{{ store[0].id }}</span></li> 
+                    <li onclick><span >{{store[0].name}}</span></li> 
+                    <li><span >{{store[0].domain}}</span></li>
+                    <li><span style="width:300px; !important;">{{store[1].deeplink}}</span></li>   
+                </ul>
+            </a>
+        </div>
+    	{% endfor %}
+	</ul>
+{% endblock %}

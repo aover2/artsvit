@@ -1,0 +1,19 @@
+{% block subject 'Подтвердите свой адрес эл. почты'  %} 
+
+{% block body_html %} 
+	{% set title = block('subject') %}
+	{% include 'common/header.html' %} 
+
+	<b>Привет, {{first_name}}!</b>
+	<br>
+	<br>
+	Благодарим за регистрацию на Scrubbly! Для завершения процесса необходимо подтвердить адрес эл. почты.
+	<br>
+	<br>
+	<a href="{{activation_hash}}" style="border-radius:2px; border:none; font-size:15px; color:white; text-decoration:none; padding:15px 0; font-weight:bold; width:200px; max-width:200px; margin:10px auto; display:block; background-color:#007AFF; text-align:center">Подтвердить</a>
+
+	{% include 'common/footer.html' %} 
+{% endblock %} 
+
+{% block body_text %}
+{% endblock %}

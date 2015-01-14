@@ -1,0 +1,44 @@
+<div class="item item-product" data-id="{{ product['id'] }}" >
+
+    <a class="image" href="/p/{{ product['id'] }}/{{ product['name_url'] }}" data-id="{{ product['id'] }}" data-store="{{ product['product_store']['domain'] }}" data-name="{{ product['name'] }}" data-source="List item image">
+        <img src="/u/thumbs/{{ product['store_id'] }}/med/{{ product['hash'] }}.jpg" alt="{{ product['name'] }}" title="Купить {{ product['name'] }}" />
+    </a>
+
+
+    <div class="item-product-info">
+        <a href="/p/{{ product['id'] }}/{{ product['name_url'] }}" class="name">{{ product['name']|raw }}</a>
+
+            <div class="second-line">
+            {% if  product['discount'] > 0 %} 
+                <span class="price newprice">{{ product['price'] }} {{ product['product_currency'] }}</span>
+            {% else %}
+                <span class="price">{{ product['price'] }} {{ product['product_currency'] }}</span>
+            {% endif %} 
+            ·
+            {% if  product['publisher'] == 'user' %} 
+                <a href="/{{ product['user']['username'] }}" class="publisher">{{ product['user']['username'] }}</a>
+            {% else %}
+                <a href="/store/{{ product['product_store']['domain'] }}" class="publisher">{{ product['product_store']['name'] }}</a>
+            {% endif %}
+
+                <span class="saves-count">+ {{ product['saves_count'] }}</span>
+
+            </div>
+
+    </div>
+
+
+    <div class="controls">
+        <button data-save-status="{{ product['save_status'] }}"  class="btn btn-save btnsave_{{ product['id'] }} {% if product['save_status'] == 1 %}btn-save-save{% endif %}">
+            {% if product['save_status'] == 1 %}
+                <div>Сохранено</div>
+            {% else %}
+                <div>Сохранить</div>
+            {% endif %}
+        </button>
+
+        
+        <button class="btn btn-send"></button>
+    </div>
+       
+</div>

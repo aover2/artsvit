@@ -1,0 +1,15 @@
+
+<div class="item item-set" data-id="{{ set['id'] }}">
+	
+    <a href="/set/{{set['url']}}" class="img"><img src="/u/sets/{{set['id']}}_min.jpg" ></a>
+    <a href="/set/{{set['url']}}" class="name">{{set['name']}}</a>
+     <div  class="products">
+
+    {% for product in set['products']|slice(0, 4) %}
+        <a href="/p/{{ product['id'] }}/{{ product['name_url'] }}" >
+        <img src="/u/thumbs/{{ product['store_id'] }}/min/{{ product['hash'] }}.jpg" alt="{{ product['name'] }}" title="{{ product['name'] }}" />
+        </a>
+        
+    {% endfor %}
+    </div> 
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block head %}{% endblock %}
+<meta charset="UTF-8"/>
+<link rel="shortcut icon" href="/static/site/i/favicon.png?{{ version }}" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'> 
+
+<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">  
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/static/site/css/main.css?{{ version }}" />
+
+<script src="/static/js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body id="about"> 
+<div id="header" class="header-desktop">
+    <div class="container">
+        <a href="/" class="header-logo"></a>
+
+        <ul class="h-nav-about">
+              <li {% if subpage_name == '' %} class="active" {% endif %}><a href="/about">О сайте</a></li> 
+              <!--<li {% if subpage_name == 'basics' %} class="active" {% endif %}><a href="/about/basics">Основы</a></li>  --> 
+              <!--<li {% if subpage_name == 'rules' %} class="active" {% endif %}><a href="/about/rules">Правила</a></li>-->     
+        </ul>
+
+    </div>
+</div>
+
+{% block header %}{% endblock %}
+{% block content %}
+{% endblock %}  
+
+{% block footer %}{% endblock %}
+<div id="footer">
+   
+</div>  
+
+</body>
+</html>

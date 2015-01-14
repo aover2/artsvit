@@ -1,0 +1,50 @@
+
+<div class="item-notification">
+    <div class="actor">
+        <a href="{{notification['actor_url']}}"><img src="{{notification['actor_photo']}}"></a>
+    </div>
+    <div class="message {% if notification['viewed'] %}viewed{% endif %}">
+        {% if notification['action'] == "user_follow" %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> подписался на вас
+
+        {% elseif notification['action'] == "friend_signup" %}
+
+            Друг <a href="{{notification['actor_url']}}">{{notification['actor_name']}}</a> зарегестрировался 
+
+        {% elseif (notification['action'] == "comment_add" or notification['action'] == "user_comment_add") %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> оставил комментарий к <a href="{{notification['object_url']}}">{{ notification['object_name'] }}</a>
+
+        {% elseif notification['action'] == "comment_mention" %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> отметил вас в комментарий к <a href="{{notification['object_url']}}">{{notification['object_name']}}</a>
+
+        {% elseif notification['action'] == "product_save" %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> сохранил <a href="{{notification['object_url']}}">{{notification['object_name']}}</a>
+
+        {% elseif notification['action'] == "refferer_signup" %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> зарегестрировался по вашей партнерской ссылке 
+
+        {% elseif notification['action'] == "user_follow_store" %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> подписался на магазин <a href="{{notification['object_url']}}">{{notification['object_name']}}</a>
+
+        {% elseif notification['action'] == "user_follow_tag" %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> подписался на тег <a href="{{notification['object_url']}}">{{notification['object_name']}}</a>
+
+        {% elseif notification['action'] == "user_follow_user" %}
+
+            <a href="{{notification['actor_url']}}"> {{notification['actor_name']}}</a> подписался на обновления <a href="{{notification['object_url']}}">{{notification['object_name']}}</a>    
+
+        {% endif %}
+        <br>
+        <time class="time timeago" datetime="{{ notification['add_time_iso'] }}"></time>
+    </div>
+    <div class="object">
+        <a href="{{notification['object_url']}}"><img src="{{notification['object_photo']}}"></a>
+    </div>
+</div>

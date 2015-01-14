@@ -1,0 +1,96 @@
+<div id="invite">
+
+    
+<div class="container">
+
+
+    <div class="share-bar page-block" >
+
+            <h2>Пригласите друзей на Scrubbly и получите 300 рублей за каждого!</h2>
+
+        <div class="link" >
+            <h4>Ссылка для приглашения:</h4>
+            <input onClick="this.select();" class="invite-link" readonly type="text" value="{{ site_root }}/welcome?r={{ current_user['id'] }}">
+            <span class="tip">Скопируйте эту ссылку и отправьте вашим друзьям во Вконтакте, Skype или по почте.</span>
+        </div>
+
+        <div class="social-btns" data-url="welcome?r={{ current_user['id']  }}&utm_campaign=share&utm_source=invite">
+            <h4>Пригласите друзей из соц. сетей:</h4>
+            <button class="btn btn-vk btn-share" data-type="vk">Вконтакте</button>
+            <button class="btn btn-tw btn-share" data-type="tw" data-text="Получите 300 рублей за регистрацию на Scrubbly! - ">Twitter</button>
+            <button class="btn btn-fb btn-share" data-type="fb">Facebook</button>
+            <button class="btn btn-gp btn-share" data-type="gp">Google+</button>
+            <span class="tip">Разместите приглашение в своей социальной сети чтобы пригласить больше друзей.</span>
+        </div>    
+        
+    </div>
+
+
+
+    <div class="page-block page-block-stat">
+        <div class="title">
+            <h2>Статистика</h2>
+        </div>
+        <div class="data">
+            <div class="stat-numbers">
+                <div class="info">
+                    За каждого приглашенного друга, который зарегистрировался, сохранил 10 вещей и совершил покупку мы начисляем вам и вашему другу по 300 руб. (макс. 3000 руб.)
+                </div> 
+                <div class="number">
+                    <span class="amount">{{ stat['count'] }}</span>
+                    <span class="caption">Приглашено</span>
+                </div>
+                <div class="number">
+                    <span class="amount">{{ stat['saves'] }}</span>
+                    <span class="caption">Сохранено вещей</span>
+                </div>
+                <div class="number">
+                    <span class="amount">{{ stat['purchases'] }}</span>
+                    <span class="caption">Покупок</span>
+                </div>
+                <div class="number">
+                    <span class="amount">{{ stat['balance'] }} руб.</span>
+                    <span class="caption">Заработано</span>
+                </div>
+            </div>
+            <canvas id="invite-chart" height="300"></canvas>
+
+            <script>
+                var data = {
+                    labels: [{{ stat['labels']|join(', ')|raw }}],
+                    datasets: [
+                        {
+                            label: "My Second dataset",
+                            fillColor: "rgba(0,122,255,0.2)",
+                            strokeColor: "rgba(0,122,255,1)",
+                            pointColor: "rgba(0,122,255,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(0,122,255,1)",
+                            data: [{{ stat['data']|join(', ')|raw }}]
+                        }
+                    ]
+                };
+
+                $( document ).ready(function() {
+                    $("#invite-chart").attr('width', $("#invite-chart").parent('.data').width()-80);
+                    var ctx = $("#invite-chart").get(0).getContext("2d");
+                    var myNewChart = new Chart(ctx).Line(data);
+                });
+            </script>
+        </div>
+
+    </div>
+
+
+    <div id="users" class="items-container">
+        {% for user in stat['users'] %}
+            {% include 'tmpl/user.html' %}
+        {% endfor %}
+      </div>
+
+</div>
+</div>
+
+
+   
