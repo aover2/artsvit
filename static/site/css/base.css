@@ -1,0 +1,22 @@
+/* Main styles
+------------------------------ */
+
+html { width: 100%;  }
+body { font-family: "Open Sans", Arial, sans-serif; font-size: 62.5%; color:#000; background-color:#fff; width: 100%;   display: block;  overflow-x:hidden !important;}
+
+
+
+a { color: #007AFF; text-decoration:none; cursor: pointer; }
+a:visited {  }
+body.desktop-device a:hover { text-decoration: underline;  }
+a:active { }
+
+h1::first-letter{ text-transform: uppercase;}
+
+.no-scroll { overflow: hidden !important; }
+
+.pos-rel { position: relative; }
+
+.item-store a.image, .item-store a.photo, .item-user a.image, .item-user a.photo { position: relative; height: auto !important; }
+.item-store a.image:before, .item-store a.photo:before, .item-user a.image:before, .item-user a.photo:before { display: block; content:''; margin-top: 100%; }
+.item-store a.image img, .item-store a.photo img, .item-user a.image img, .item-user a.photo img {position: absolute; width: 100%; height: auto; top: 0; left: 0;}

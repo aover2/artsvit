@@ -1,0 +1,29 @@
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 769px) and (max-width: 1023px) {
+
+  .item {width: 23.99%; margin-right: 0.6666%;margin-left: 0.6666%;}
+    .item:nth-child(4n) {margin-right: 0;}
+    .item:nth-child(4n+1) {margin-left: 0;}
+
+  .item-related{width: 106.8px; margin-right: 4.6px; margin-left: 4.6px;} 
+
+  #set{}
+    .set-header img {min-height: 0;}
+    .set-header h1 {font-size: 2.5em; margin-bottom: 40px;}
+    .set-header .text {-webkit-column-count: 3; column-count: 3;}
+
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .item {width: 31.99%;margin-right: 0.999%;margin-left: 0.999%;}
+  .item:nth-child(3n) {margin-right: 0;}
+  .item:nth-child(3n+1) {margin-left: 0;}
+
+  .item-related{width: 112px; margin-right: 5.5px; margin-left: 5.5px;} 
+
+  #set{}
+    .set-header img {min-height: 0;}
+    .set-header h1 {font-size: 2.3em; margin-bottom: 40px;}
+    .set-header .text {-webkit-column-count: 2; column-count: 2;}
+}

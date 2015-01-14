@@ -1,0 +1,23 @@
+#settings{}
+  #settings .container{padding: 40px 0 0; }
+  #settings .navs{width: 200px; float: left; background-color: #fff; border: 1px solid #eee; border-radius: 2px;position: fixed; }
+    #settings .navs li{ font-size: 1.3em; text-indent: 15px; font-weight: bold; line-height: 40px; border-bottom: 1px solid #ddd; }
+    #settings .navs li:last-child{border-bottom: none;}
+
+  #settings .edit-form{float: right; box-sizing:border-box; width: 70%;  background-color: #fff; border: 1px solid #eee; border-radius: 2px; margin-bottom: 55px; }
+  #settings .edit-form .block-title{font-size: 1.5em; font-weight: bold;  line-height: 40px;}
+
+  #settings .edit-form ul{float: left; width: 100%;}
+  #settings .edit-form li{ font-size: 1.3em; padding: 0 4%; font-weight: bold; line-height: 60px; border-bottom: 1px solid #eee; white-space: nowrap;}
+    #settings .edit-form li:last-child{border: none;} 
+    #settings .edit-form li span{width: 25%; display: inline-block; float: left; color: #888; }
+    #settings .edit-form li input{width: 70%;  padding: 5px 2%; }
+    #settings .edit-form li textarea{width: 70%; height: 80px; padding: 5px 2%; margin: 15px 0 0; border: 1px solid #ddd; border-radius: 2px;  }
+    #settings .edit-form .last-name{width: 32%;}
+    #settings .edit-form .first-name{width: 32%; margin-right: 2%;}
+
+  #settings .controls-wrap{position: fixed; bottom: 0;  width: 100%;}
+    #settings .controls{ background-color: #FFF; width: 100%; box-sizing:border-box;  height: 62px; padding: 15px 0; text-align: right; border-top-right-radius: 2px; border-top-left-radius: 2px; border: 1px solid #ddd; border-bottom: none;}
+      #settings .controls form{display: inline-block;}
+       #settings .controls .btn{border: none; display: inline-block; border: 1px solid #ddd; margin: 0; cursor: pointer; outline: none; font-size: 1.2em; font-weight: bold; line-height: 32px; color: #888; background: rgba(0,0,0,0.05); padding: 0 15px;}
+        #settings .controls .btn-save{background-color: #0076F5; color: #fff; border-color: #0076F5; margin: 0 3% 0 10px;}

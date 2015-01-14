@@ -1,0 +1,39 @@
+#widget{}
+  
+  #widget #widget_form{width: 220px; height: 440px;}
+  #widget .image-slider {overflow: hidden;position: relative;}
+  #widget .image-slider ul, #widget .image-slider li {padding: 0;margin:0;list-style-type: none;}
+  #widget .image-slider ul{width: 9999px; position: relative;}
+  #widget .image-slider ul li { width: 220px; height: 220px;  float: left; overflow: hidden; position: relative;list-style-type:none;} 
+  #widget .image-slider ul li img{ width: 220px; height: auto; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;}
+  #widget .image-slider .navigate {position: absolute;width: 100%;height:220px;bottom: 0;right: 0;left: 0;margin:auto;z-index: 1;}
+  #widget .image-slider .navigate .arrows {position: relative;overflow: hidden;}
+  #widget .image-slider .navigate .arrows span {height: 220px;cursor: pointer;color:#444;}
+  /*#widget .image-slider .navigate .arrows .left {width:100%;float: left;}*/
+  #widget .image-slider .navigate .arrows .right {width:100%;float: right;}
+  #widget .image-slider .navigate-btns {position: absolute;width: 50%;height: 12px;bottom: 10px;right: 0;left: 0;margin: auto;z-index: 2;}
+  #widget .image-slider .navigate-btn {cursor:pointer;text-indent: 9999px;border-radius: 50%;display: inline-block;height: 6px;width: 6px;border: 1px solid #fff;margin: 0 5px;}
+  #widget .image-slider .navigate-btn.active {background-color: #fff;}  
+
+
+  #widget .wrapper{ width: 210px; padding: 0 5px; height: 40px; background-color: #fff; border-top: 1px solid #D2D2D2; float: left;}
+  #widget input[type="text"]{  font-size: 1.2em; border: none; float: left; margin: 0; width: 210px; padding: 11px 0; outline: none;}
+  #widget .input-price{ width: 50px !important; font-weight: bold; text-align: right; margin-right: 5px !important; padding-right: 10px !important; border-right: 1px solid #D2D2D2 !important;}
+
+  #widget .switcher{ display: inline-block; }
+    #widget .switcher a{line-height: 20px; cursor: pointer; font-size: 1.2em; font-weight: bold; color: #999; display: inline-block; padding: 10px 3px;}
+body.desktop-device #widget .switcher a:hover{ text-decoration: none; color: #666;}
+    #widget .switcher a.active{ color: #000;}
+
+  #widget .comment {height: 57px;display: inline-block;float: left;width: 100%;overflow: hidden;border-top: 1px solid #D2D2D2;}
+    #widget .comment textarea {width: 97%;outline:none;height:50px;padding-left:5px;padding-top:5px;border:none;background-color:#fff;font-size:1.2em;resize:none;overflow: hidden;}
+
+
+  #widget .btn-submit{ border-radius: 0; width: 220px; float: left; height: 40px; background-color: #007AFF; color: #fff; font-size: 1.4em;}
+
+  #widget .saved{ width: 220px; height: 440px;  float: left;  display: none;background-color: #007AFF;color:#fff;}
+    #widget .saved h2{ width: 220px; margin: 30px 0 20px; text-transform: uppercase; text-align: center; font-size: 2.0em;font-weight:600;}
+
+  #widget .share-btns {display: block;margin: 0 auto;width: 170px;position: absolute;right: 0;left: 0;bottom: 60px;}
+    /*#widget .btn.btn-share {display: block;margin: 7px auto;width: 100%;line-height: 30px;color:#fff;}*/
+    #widget .btn-view{background-color:#007AFF;border-top:1px solid rgba(255,255,255,0.2);display: block;margin: 30px auto 0px;line-height:40px;width:100%;position: absolute;bottom:0;text-align: center; font-size: 1.4em; color: #fff;}

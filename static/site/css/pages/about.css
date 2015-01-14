@@ -1,0 +1,41 @@
+
+#about{}
+  #about p{}
+
+
+  #about-about h1{ font-size: 3.2em; width: 80%; margin: 80px 10% 0px; text-align: center; display: inline-block; color: #444; }
+  #about-about .video{ width: 50%; margin: 50px 23% 50px; padding: 20px 2%; background-color: #fff; overflow: hidden; border-radius: 2px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20); }
+  
+
+	#about-about .video .videoWrapper {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	}
+
+	#about-about .video .videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+
+	#about-about .state-block{ width: 60%; margin: 50px 20%; float: left; text-align: center; color: #444;}
+		#about-about .state-block h2{ font-size: 2.4em;  margin: 0 0 20px 0; font-weight: bold;}
+		#about-about .state-block p{ font-size: 1.6em; width: 80%; margin: 0 auto;}
+
+	#about-about .img-about-products{ float: left; width: 90%; margin: 0 5% 50px;}
+		#about-about .img-about-products img{ width: 100%;}
+
+
+	#about-about .stats{ width: 60%; margin: 0px 20% 50px; float: left;}
+		#about-about .stats .num{ width: 25%; float: left;  color: #888; text-align: center; font-weight: bold;}
+		#about-about .stats .value{ font-size: 4.8em;}
+		#about-about .stats .label{ font-size: 1.6em;}
+
+
+	#about-about .btn-signup{ line-height: 60px; font-size: 1.6em; width: 300px; background:#007AFF; padding: 0; text-align: center; margin: 20px 0 150px -150px; left:50%; position: relative; }	
+

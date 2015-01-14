@@ -1,0 +1,21 @@
+
+#welcome{ width: 100%; position: absolute;  height: 100%; background-color: #000; background-image:url(../../i/bg-main.jpg); background-position: center;  float: left;  }
+  #welcome .welcome{ width: 90%; max-width: 600px; box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.3); border-radius: 2px;background-image: url(../../i/welcome-bg.jpg); background-size: 100%; background-color: #007AFF; max-height: 360px; margin: auto;position: absolute;top: 0;left:0;bottom:0;right:0;}
+  #welcome .title{ width: 80%;  float: left; padding: 40px 10% 30px 10%;  }
+  #welcome .title .logo{ width: 100%;max-width:250px;height: 60px; background-image:url(../../i/logo-w-medium.png);background-size:contain;background-repeat: no-repeat; overflow:hidden;margin: 0 auto;}
+  #welcome .title h1{ float: left; font-size: 1.8em; width: 100%; font-weight: 400; text-align: center; color: #fff; }
+
+  #welcome .counts{ width: 50%; overflow:hidden; margin: 40px auto 10px auto;}
+
+   #welcome .counts .count:last-child{ border: none !important;}
+  #welcome .counts .count{ width: 49%; border-right: 1px solid #fff; float: left; padding: 0px 0; content: #fff; text-align: center;}
+  #welcome .counts .count span{  width: 100%; float:left; font-size: 2.1em; font-weight:700; color: #fff;}
+  #welcome .counts .count label{ width: 100%; float: left; font-size: 1.2em; font-weight:600; margin-top: 5px; color: #fff; }  
+
+
+  #welcome .signin-btns{ width: 100%; padding: 0% ;margin: 0 auto 10px auto; max-width: 300px; overflow: hidden;}
+      #welcome .btn i{ margin-left: 20px; margin-right: 10px;}
+      #welcome .btn i:before{ font-size: 1.6em; }
+
+      #welcome .a-video{ color: #fff; display: block; margin: 0px auto 20px auto; font-size: 1.3em; font-weight: bold;}
+        #welcome .a-video i{ margin: 0 10px 0 0;}

@@ -1,0 +1,5 @@
+#feed{}
+  #feed .feed-add-banner{ width: 100%;  height: 80px; float: left; line-height: 76px; margin: 20px 0 0 0; box-sizing: border-box; text-align: center; color: #aaa; border:2px dashed #ddd; background: transparent; box-shadow: none;}
+body.desktop-device #feed .feed-add-banner:hover{ border-color: #ccc; text-decoration: none; color: #888;}
+    #feed .feed-add-banner span{ font-size: 1.4em; font-weight: bold; display: inline-block; vertical-align: middle; float: none; height: auto;}
+    #feed .feed-add-banner .ico{ background: transparent; font-size: 3.6em; margin-right: 5px;  }  

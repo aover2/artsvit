@@ -1,0 +1,127 @@
+#product{ width: 100%; float: left; background-color: #f5f5f5; margin-bottom: 20px;  } 
+  .product-preview-main-block{background-color: #f5f5f5; width: 100%; float: left; margin-bottom: 20px;} 
+  
+    #product-page #content{ margin: 0;}
+  #product-page #header{ background:transparent;}
+
+
+  #product .product-publisher, #product-preview .product-publisher{ font-size: 1.4em;  width: 100%; padding: 10px 0;  margin-bottom: 0px;  float: left; height: 50px;}
+    #product .product-publisher .photo, #product-preview .product-publisher .photo{ border-radius: 2px; overflow: hidden; width: 50px; height: 50px; float: left; margin-right: 10px;}
+    #product .product-publisher .photo img, #product-preview .product-publisher .photo img{width: 100%; }
+    #product .product-publisher .publishers, #product-preview .product-publisher .publishers{font-size:1em; color: #888; display: inline-block; width:70%; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin: 2px 0;}
+      #product .product-publisher .publishers a, #product-preview .product-publisher .publishers a{ color:#444; font-weight:bold; }
+      #product .product-publisher .time, #product-preview .product-publisher .time{font-size:0.9em;display: inline; color: #888; clear: left;} 
+
+  .product-block-title{ width: 100%; float: left; margin: 0px 0px 0px; font-size: 1.8em; color: #888; font-weight: 600;}
+
+  #product .product-main, #product-preview .product-main{ width: 65.957%; float: left; margin: 20px 0;}
+  #product .product-info, #product-preview .product-info{  border-radius: 2px;  width: 100%; margin: 20px auto; height: auto;}
+
+  #product .product-image, #product-preview .product-image{ margin-top: -40px; background-color: #fff; width:100%; position: relative;  border-radius: 2px; overflow: hidden;  }
+  #product .product-image:before, #product-preview .product-image:before {margin-top: 125%;content:'';display: block;}
+  #product .product-image img, #product-preview .product-image img{ max-width: 100%; height: auto; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; }   
+
+
+ 
+  #product .product-info .title, #product-preview .product-info .title{ width: 100%; padding: 0px; margin: 20px auto 0px auto; }
+    #product .product-info h1, #product-preview .product-info h1{white-space:nowrap; overflow:hidden; font-weight: bold; text-overflow:ellipsis; font-size:1.8em; color: #444; display: inline-block; width: 100%;}
+
+  
+  #product .breadcrumbs, #product-preview .breadcrumbs{width: 100%; float: left; margin: 0; }
+  #product .tags, #product-preview .tags{width: 88%; padding: 10px 6% 5px; margin-top: 0px;  float: left; }
+    #product .tags .tag, #product-preview .tags .tag{ line-height: 120%; }
+
+#product .product-sidebar, #product-preview .product-sidebar{width:31.9148%; float: right; margin: 60px 0 0;}
+#product .product-sidebar-block, #product-preview .product-sidebar-block{ margin: 0px auto 0px auto; width:100%;   overflow: hidden; }          
+
+  
+  .product-savers-thumbs{ width: 100%; overflow: hidden;  margin: 0px auto;}
+    .product-savers-thumbs a{ width: 25px; margin:0 1px 1px 0; float: left; overflow: hidden; height: 25px; border-radius: 2px;}
+    .product-savers-thumbs a img{ width: 100%;}
+
+  #product .product-share,  #product-preview .product-share{ }
+  #product .product-share .share-btns, #product-preview  .product-share .share-btns{ }
+  #product .product-share .btn, #product-preview  .product-share .btn{ float: left; line-height: 30px; font-size: 1.3em; color: #888; font-weight: bold; background:transparent; margin: 10px 0px 10px 0px;  }
+    #product .product-share .btn:first-child i, #product-preview  .product-share .btn:first-child i{ margin-right: 2px;}
+    #product .product-share .btn:first-child, #product-preview  .product-share .btn:first-child{margin-left:5.66%;margin-right:12%;}
+    #product .product-share .btn-vk, #product-preview  .product-share .btn-vk{  }
+    #product .product-share .btn-tw,  #product-preview  .product-share .btn-tw{ }
+    #product .product-share .btn-fb, #product-preview .product-share .btn-fb{}
+    #product .product-share .btn-pin, #product-preview .product-share .btn-pin{ }
+
+    #product .product-sidebar-block .price,   #product-preview .product-sidebar-block .price{ color: #444; line-height: 20px; font-size: 1.8em; font-weight: bold;  width: 90%; margin: 20px auto 0px; padding-bottom: 10px;}
+      #product .product-sidebar-block .price i:before,   #product-preview .product-sidebar-block .price i:before{ float: right; color: #4CD964; font-size: 16px;}
+
+    #product .product-controls,   #product-preview .product-controls{ margin: 0px auto 20px auto; width: 90%; position: relative;}
+        #product .product-controls .btn, #product-preview .product-controls .btn{width: 76%; color: #666; border: 1px solid #ddd; margin: 0 auto; display: block; background-color: #eee; background-image: url('../../i/product-btns-icons.png');  text-align: left;  background-repeat: no-repeat; font-weight: 700; font-size: 1.4em; line-height: 20px; padding: 15px 5.35714% 15px 17.8571%; box-sizing: initial;}
+        #product .product-controls .btn span, #product-preview .product-controls .btn span{ float: right; display: inline-block;}
+        #product .product-controls .btn div, #product-preview .product-controls .btn div{ float: left; display: inline-block;}
+        #product .product-controls .btn-buy, #product-preview .product-controls .btn-buy{ overflow: hidden;color: #3D3100; background-position:3.5% 0px;  border-color: #F5C400;  background-color: #FFCC00; margin-top: 10px; margin-bottom: 10px;}
+         #product .product-controls .btn-buy div, #product-preview .product-controls .btn-buy div {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;}
+       #product .product-controls .btn-save, #product-preview .product-controls .btn-save{background-position: 3.5% -50px; color: #fff; background-color: #007AFF; border-color: #0076F5;    margin-bottom: 10px;}
+
+        #product .product-controls .btn-save-save, #product-preview .product-controls .btn-save-save{ background-position: 3.5% -100px;}
+
+        #product .product-controls .btn-free, #product-preview .product-controls .btn-free{ font-size: 1.3em;  background-position: 3.5% -199px; padding: 10px 5.35714% 10px 17.8571%; height: 20px; margin-bottom: 20px;}
+
+  
+   .psb-free{ }
+     .psb-free .terms {padding: 15px 5% 15px; float: left;  width: 90%; position: relative;  color: #444; }
+      .psb-free .terms span{ width: 70%; float: left; font-size: 1.2em; line-height: 1.3em;}
+      .psb-free .terms .count{ width: 30%; float: right; text-align: center; font-size: 1.1em;}
+      .psb-free .terms .num{ font-size: 2em;  font-weight: bold;}
+
+     .psb-free .share {padding: 10px 5% 15px; background-color: #FFF3C2; float: left; width: 90%; position: relative; font-size: 1.1em; color: #666;}  
+       .psb-free .share .invite-link{ width: 93%; padding: 5px 3%; background-color: #FFE785; margin: 5px 0 10px; float: left; border:none; ;}
+       .psb-free .share .btn-share{ float: left; margin-right: 5px; color: #666; margin-top: 5px;}
+
+       .psb-free .share .a-signup{ width: 100%; background-color: #FF2D55; font-weight: bold; color: #fff; font-size: 1.1em; line-height: 2.6em; float: left;}
+
+  #product .info-block, #product-preview  .info-block{}
+      #product .info-block ul, #product-preview  .info-block ul{ float: left; width: 100%; margin: 10px 0;}
+      #product .info-block li, #product-preview  .info-block li{ width: 40%; margin:0 2% 0 5%; float: left;}
+      #product .info-block li a, #product-preview  .info-block li a{  line-height: 32px; float: left; color: #888; font-size: 1.2em; width: 100%;}
+        #product .info-block li:nth-child(5n), #product .info-block li:nth-child(6n),
+         #product-preview  .info-block li:nth-child(5n), #product-preview .info-block li:nth-child(6n) { border:none;  }
+
+      body.desktop-device #product .info-block li a:hover,
+       body.desktop-device #product-preview  .info-block li a:hover{ text-decoration: none; color: #444}
+        #product .info-block li a i, #product-preview  .info-block li a i{ margin-right: 5px;}
+        #product .info-block li a i:before, #product-preview  .info-block li a i:before{  font-size: 14px;  }
+
+   #product .store-block{}
+   #product .store-block .header, #product-preview .store-block .header{ width: 100%; float: left; height: 60px;}
+   #product .store-block .title, #product-preview .store-block .title{ width:50%;max-width: 150px; float: left; margin: 20px 0 0 5%; overflow: hidden;}
+   #product .store-block .title .name, #product-preview .store-block .title .name{ color: #000; font-size: 1.4em; width: 150px; font-weight: bold; clear: left; float: left; display: inline-block;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+   #product .store-block .title .domain, #product-preview .store-block .title .domain{ color: #666; font-size: 1.2em; width: 150px; clear: left; float: left; display: inline-block;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+   #product .store-block .btn-follow, #product-preview .store-block .btn-follow{width:35%;max-width: 110px; float: right; padding: 7px 0px; margin: 24px 5% 0 0; line-height: 12px; font-size: 1.2em; border-radius: 2px; border: 1px solid #007AFF;}
+   #product .title-products, #product-preview .title-products{ width:93.5%; padding: 15px 3% 15px 3%; float: left; overflow: hidden;}
+      #product .title-products a, #product-preview .title-products a{width:30%; position: relative; background-color: #fafafa; height:auto; border-radius: 2px; overflow: hidden; margin: 0 0px 6px 2.665%; float: left; box-shadow: 0px 0px 0px 1px #ddd;}
+      #product .title-products img, #product-preview .title-products img{ width:100%;height: auto; margin: auto; position:absolute; top:0;bottom:0;left:0;right:0; height: auto; float: left; position: absolute;}  
+      #product .title-products a:before , #product-preview .title-products a:before {display: block;content:'';margin-top: 100%;} 
+
+   #product .product-comments, #product-preview .product-comments{ border-top:1px solid #ddd; width:100%; overflow:hidden;margin:auto;} 
+      #product .comments, #product-preview .comments{ padding: 0px 0; float: left; width: 100%; } 
+      #product .product-comments form, #product-preview .product-comments form{ position: relative;  width: 100%; padding: 20px 0; float: left;}
+      #product .product-comments .comment-input, #product-preview .product-comments .comment-input{ background-color: #fff; float: left;padding: 0.55em 2.01342%; width:72%;outline: none; font-size: 1.4em;border-top-right-radius:0!important;border-bottom-right-radius:0!important;border-top-left-radius:2px;border-bottom-left-radius:2px;margin: 0;}
+      #product .product-comments input[type=submit], #product-preview .product-comments input[type=submit]{padding:0 1px; float:right; width:20%; cursor:pointer; height:3.08em; border:none; background-color:#007AFF; color: #fff; font-size:1.2em; font-weight:bold;}
+
+
+    .product-store-info{margin:20px auto 10px; border-top:1px solid #ddd;  width:100%; overflow:hidden; position: relative;  display: block;}
+        .product-store-info .psib{ width: 27%; margin: 20px 5% 20px 0; float: left; color: #666;}
+        .product-store-info .psib h3{ margin-bottom: 5px;  font-size: 1.3em; font-weight: bold;}
+        .product-store-info .psib p{ font-size: 1.2em;}
+
+  .product-similar-products, #product-preview-similar-products, .product-savers{ padding-bottom: 20px; }
+
+
+
+#product-preview{ position: fixed; float: left; top: 0; left: 0; background-color: #fff; z-index: 2000; width: 100%; height: 100%; overflow-y: scroll; display: none; }
+  /*#product-preview .cover{ background-color:rgba(245,245,245,0.95); width: 100%; height: 100%; position: fixed; }*/
+  #product-preview .container{ overflow: inherit;}
+  #product-preview .cover {display: none;}
+  #product-preview .btn-close { width:10%; max-width:40px; height:auto; top:10px; right:20px; overflow:hidden; z-index: 8400; float: right; position: fixed; }
+  #product-preview .btn-close img {width: 100%;height: auto;}
+body.desktop-device #product-preview .btn-close:hover{ background-color: #fff;}
+  #product-preview .content{ float: left; width: 100%; position: relative;  padding-bottom: 100px !important; overflow-x: hidden;}
+  #product-preview .cover-close{width: 100%; height: 100%; position: absolute; cursor: -webkit-zoom-out; cursor: -moz-zoom-out;}

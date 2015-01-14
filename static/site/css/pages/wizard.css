@@ -1,0 +1,14 @@
+#wizard{}
+  #wizard .header{width: 100%; float: left; top:0; position: fixed; z-index: 2000; background: rgba(255, 255, 255, 0.96); height: 100px; border-bottom: 1px solid #D2D2D2; left: 0;}
+  #wizard .header .title{max-width: 600px;width: 70%; float: left; margin: 24px 0;}
+  #wizard .header h1{ width: 100%; float: left; font-size: 2.0em; font-weight: bold;}
+  #wizard .header h2{ width: 100%; float: left; font-size: 1.4em; color: #888; }
+  #wizard .header .btn-next{ display: none; font-weight: bold; margin: 34px 0;  float: right; font-size: 1.2em; color: #fff; background-color: #007AFF; padding: 0 1.5%; text-align: center; line-height: 32px;}
+  #wizard .header .btn-next-active{ display: block !important;}
+
+  #wizard #content{ padding-top: 50px; padding-bottom: 40px !important;}
+
+  #wizard  .wizard-count{  width:50px;background-position-x: -44px!important; height:20px; background-image:url(../../i/count_circles.png); margin:40px 0; float:right;}
+      #wizard .wizard-count1{ background-position:0 -20px;}
+      #wizard .wizard-count2{ background-position:0 -40px;}
+      #wizard .wizard-count3{ background-position:0 -60px;}

@@ -1,0 +1,199 @@
+@import url("base.css");
+@import url("icons.css");
+@import url("inputs.css");
+@import url("buttons.css");
+@import url("popups.css");
+@import url("elements.css");
+@import url("layouts.css");
+
+@import url("pages/settings.css");
+@import url("pages/feed.css");
+@import url("pages/shop.css");
+@import url("pages/product.css");
+@import url("pages/about.css");
+@import url("pages/widget.css");
+@import url("pages/welcome.css");
+@import url("pages/wizard.css");
+@import url("pages/set.css");
+@import url("pages/invite.css");
+
+@import url("responsive/normal.css");
+@import url("responsive/wide.css");
+@import url("responsive/mt.css");
+@import url("responsive/mobile.css");
+@import url("responsive/tablet.css");
+
+
+
+
+/* Pages
+------------------------------ */ 
+ 
+
+#store{}
+  #store .page-header .photo{ background-image: url('../i/store-nologo-big.png'); }
+
+#tag{} 
+  #tag .page-header .photo{ background-image: url('../i/tag-nologo-big.png'); }
+
+
+
+
+
+
+
+#error{}
+  #error h1{ width: 100%; float: left;  text-align: center; color: #ccc; font-size: 20em; font-weight: 300;}
+  #error .caption{ width: 40%; margin: 0 30%; font-size: 1.6em; line-height: 150%; text-align: center;}
+
+
+
+#purchase{}
+  #purchase h1{ width: 100%; float: left; margin: 200px 0 -20px; font-size: 1.8em;  text-align: center; color: #888;}
+  #purchase #loading{ display: block !important;}
+
+
+/*#welcome{ width: 100%; height: 100%; background-color: #000; background-image:url(../i/bg-main.jpg); background-position: center;  float: left;  }
+  #welcome .welcome{ width: 600px;  box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.3); border-radius: 2px; background-image:url(../i/welcome-bg.jpg); background-size: 100%;  background-color: #007AFF; float: left; height: 390px;  margin: -260px 0 0 -300px;   top:50%; left: 50%; position: relative;}
+  #welcome .title{ width: 480px;  float: left; padding: 60px 60px 40px 60px;  }
+  #welcome .title .logo{ width: 240px;  margin: 0px 120px 10px; height: 60px; background-image:url(../i/logo-w-medium.png); float: left;}
+  #welcome .title h1{ float: left; font-size: 1.8em; width: 100%; font-weight: 400; text-align: center; color: #fff; }
+
+  #welcome .counts{ width: 300px; float: left; margin: 30px 150px;}
+   #welcome .counts .count:last-child{ border: none !important;}
+  #welcome .counts .count{ width: 149px; border-right: 1px solid #fff; float: left; padding: 0px 0; content: #fff; text-align: center;}
+  #welcome .counts .count span{  width: 100%; float: left; font-size: 2.4em; font-weight:600; color: #fff;}
+  #welcome .counts .count label{ width: 100%; float: left; font-size: 1.2em; font-weight:600; margin-top: 5px; color: #fff; }  
+
+  #welcome .signin-btns{ width: 300px; padding: 0px 150px; margin-bottom: 40px;  float: left;}
+      #welcome .btn-signin{   }
+      #welcome .btn-signin-vk{;}
+      #welcome .btn-signin-fb{}*/
+
+
+
+     
+
+#promote{ width: 100%; height: 100%; float: left; background-color: rgba(0,0,0,0.5); position: fixed; z-index: 8000;}
+  #promote .popup{border-radius: 2px; float: left; position: relative; width: 500px; background-color: #fff; left: 50%; top:50%; margin: -170px 0 0 -250px; }
+   #promote h2{ width: 100%; margin: 50px 0 5px; text-align: center; font-size: 2.4em; font-weight: 700;}
+   #promote h3{ width: 80%; margin: 0px 10%; text-align: center; font-size: 1.6em; color: #666;}
+   #promote .share-btns{ width:420px; float: left; margin: 40px 0 60px 45px; }
+    #promote .share-btns a{ width: 90px; padding: 10px 0 10px 40px; font-size: 1.2em; background-repeat: no-repeat; background-image: url('../i/share-btns.png'); font-weight: bold; float: left; background-color: #000; color: #fff; margin-right: 10px;}
+    #promote .share-btns .btn-vk{ background-position: -5px -5px; background-color: #45668e;}
+    #promote .share-btns .btn-tw{background-position: -5px -55px; background-color: #00aced;}
+    #promote .share-btns .btn-fb{background-position: -5px -105px; background-color: #3b5998;}
+
+
+
+#map{}
+  #map .links{ width: 96%; float: left; background-color: #fff; border: 1px solid #D2D2D2; padding: 20px 2%; margin: 20px 0 0;}
+  #map .links ul{ width: 100%; float: left; margin-bottom: 20px;}
+  #map .links li{ width: 33%; margin: 5px 0; float: left; font-size: 1.3em;}
+
+
+#out-frame{ width: 100%; float: left; height: 100%; margin-top: 50px; position: absolute; }
+  .out-header-nav{ width: 400px; float: left;}
+  .out-header-nav a{ font-size: 1.3em; line-height: 50px; font-weight: bold; color: #444;}
+
+
+
+
+
+
+/* tipsy 
+------------------------------ */
+.tipsy { font-size: 1em; position: absolute; padding: 5px; z-index: 100000; }
+  .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #000; }
+  .tipsy-arrow-s { border-top-color: #000; }
+  .tipsy-arrow-e { border-left-color: #000; }
+  .tipsy-arrow-w { border-right-color: #000; }
+  
+        .tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
+
+
+/* Basic jQuery Slider essential styles */
+
+ul.bjqs{position:relative; height: 100% !important; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
+li.bjqs-slide{position:absolute; display:none; height: 100% !important;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.bjqs-controls.v-centered li a{position:absolute;}
+ul.bjqs-controls.v-centered li.bjqs-next a{right:0;}
+ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;}
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;}
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+
+
+
+/* Spinner */
+
+.spinner {
+  margin: 0 auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #888;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+
+
+
+* {
+  pointer-events: none !important;
+}

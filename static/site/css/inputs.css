@@ -1,0 +1,30 @@
+input[type=text],
+input[type=search],
+input[type=password],
+input[type=checkbox],
+input[type=radio],
+input[type=file],
+input[type=email],
+textarea
+{
+	font-family: "Open Sans", Arial, sans-serif;
+	background-color: #F5F5F5;
+	font-size:1.2em;
+	outline: none;
+	border:1px solid #ddd;
+	border-radius: 2px;
+}
+  input[type=text]:focus{ }
+
+
+input[type=button]{}
+input[type=submit]{ outline: none;}
+
+label{}
+
+textarea{ font-family: "Open Sans", Arial, sans-serif; font-size:1.2em; resize:none;}
+
+
+select{ outline: none; font-family: "Open Sans", Arial, sans-serif; font-size:1.2em; }
+  select:focus{}
+  select option{}
